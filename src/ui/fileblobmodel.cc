@@ -23,7 +23,6 @@
 #include "dbif/method.h"
 #include "dbif/types.h"
 #include "dbif/universe.h"
-#include "util/settings/theme.h"
 #include "ui/rootfileblobitem.h"
 #include "util/settings/theme.h"
 

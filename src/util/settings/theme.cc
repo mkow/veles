@@ -113,20 +113,14 @@ QColor byteColor(uint8_t byte) {
 }
 
 QFont font() {
-#if defined(Q_OS_WIN32)
-  return QFont("Courier", 10);
-#elif defined(Q_OS_MAC)
-  return QFont("Menlo", 10);
-#else
-  return QFont("Monospace", 10);
-#endif
+  return QFont{};
 }
 
 QFont fixedFont() {
 #if defined(Q_OS_WIN32)
   return QFont("Courier", 10);
 #elif defined(Q_OS_MAC)
-  // For some reason font with size=10 look too small on macOS.
+  // For some reason font with size=10 looks too small on macOS.
   return QFont("Monaco", 12);
 #else
   return QFont("Monospace", 10);
